@@ -6,3 +6,7 @@ res://kenney_themes/kenneyUI-red.tres
 res://kenney_themes/kenneyUI-yellow.tres
 res://FlatUI/kenneyUI-green.tres
 res://FlatUI/kenneyUI-blue.tres
+res://learning_menu.gd
+res://algorithms.tscn
+res://routines.tscn
+res://ColorRect.gd
