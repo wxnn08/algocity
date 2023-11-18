@@ -1,15 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700079778
+::res://::1700275959
 ColorRect.gd::GDScript::-1::1699821289::0::1::::<>ColorRect<>::
 icon.svg::CompressedTexture2D::3787635335594762747::1699743985::1699743992::1::::<><>::
-menu.tscn::PackedScene::6845851776411815318::1699928102::0::1::::<><>::uid://cv8fyyxwbvtuj
-menu_algorithms.tscn::PackedScene::3500995450438336872::1700077991::0::1::::<><>::
+menu.tscn::PackedScene::6845851776411815318::1700080565::0::1::::<><>::uid://cv8fyyxwbvtuj::::res://menu_routines.tscn<>uid://bp455bnyh7fe3::::res://menu_algorithms.tscn
+menu_algorithms.tscn::PackedScene::3500995450438336872::1700085053::0::1::::<><>::
 menu_lateral_button.tscn::PackedScene::606128816574198892::1699926880::0::1::::<><>::
-menu_routines.gd::GDScript::-1::1700078902::0::1::::<>Control<>::
-menu_routines.tscn::PackedScene::6315279290779073333::1700078902::0::1::::<><>::res://menu_routines.gd
+menu_routines.gd::GDScript::-1::1700080452::0::1::::<>Control<>::
+menu_routines.tscn::PackedScene::6315279290779073333::1700080565::0::1::::<><>::res://menu_routines.gd
 README.md::TextFile::-1::1699820278::0::1::::<><>::
-::res://algorithms/::1700078564
-algorithm.gd::GDScript::-1::1700078491::0::1::::Algorithm<>RefCounted<>::
+::res://algorithms/::1700080565
+algorithm.gd::GDScript::-1::1700080489::0::1::::Algorithm<>RefCounted<>::
+algorithm.tscn::PackedScene::2097187090015749306::1700080565::0::1::::<><>::res://algorithms/algorithm.gd
 ::res://figma/::1699907809
 PressedMenuNutton.png::CompressedTexture2D::2452685278070881856::1699907803::1699907809::1::::<><>::
 Rectangle 3.png::CompressedTexture2D::5606733590568473296::1699907683::1699907692::1::::<><>::

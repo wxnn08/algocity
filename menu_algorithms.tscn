@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://bp455bnyh7fe3"]
+[gd_scene load_steps=3 format=3 uid="uid://bp455bnyh7fe3"]
+
+[ext_resource type="Script" path="res://menu_algorithms.gd" id="1_q5sj4"]
+[ext_resource type="Resource" uid="uid://bp3ib6g00651q" path="res://algorithms/selection_sort.tres" id="2_vosvg"]
 
 [node name="MenuAlgorithms" type="Control"]
 layout_mode = 3
@@ -7,6 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_q5sj4")
+algorithms = Array[Resource("res://algorithms/algorithm.gd")]([ExtResource("2_vosvg")])
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

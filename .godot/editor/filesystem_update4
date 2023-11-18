@@ -1,6 +1,4 @@
-res://menu_routines.tscn
-res://menu_routines.gd
 res://menu_algorithms.tscn
-res://menu.tscn
-res://algorithms/algorithm.tscn
 res://algorithms/algorithm.gd
+res://algorithms/selection_sort.tres
+res://menu_algorithms.gd
