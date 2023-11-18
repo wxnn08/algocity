@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Algorithm" load_steps=3 format=3 uid="uid://bp3ib6g00651q"]
+
+[ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="1_p2mj3"]
+[ext_resource type="Script" path="res://algorithms/algorithm.gd" id="1_tapr2"]
+
+[resource]
+script = ExtResource("1_tapr2")
+algorithm_name = "Selection Sort"
+algorithm_tag = 0
+algorithm_time_complexity = 2
+algorithm_space_complexity = 0
+algorithm_icon = ExtResource("1_p2mj3")
+algorithm_code = "def selectionSort():   for i in range(n):       indexMin = i       for j in range(i+1, n):           if intArray[j] < intArray[indexMin]:               indexMin = j       if indexMin != i:           temp = intArray[indexMin]           intArray[indexMin] = intArray[i]           intArray[i] = temp"

@@ -1,4 +1,6 @@
-res://menu_algorithms.tscn
-res://algorithms/algorithm.gd
-res://algorithms/selection_sort.tres
 res://menu_algorithms.gd
+res://menu_group_button.gd
+res://menu_group_button.tscn
+res://menu_algorithms.tscn
+res://algorithms/group_icon_find.tres
+res://algorithms/grou_icon_sort.tres

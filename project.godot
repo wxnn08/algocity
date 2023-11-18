@@ -14,3 +14,12 @@ config/name="Algocity"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/quality/msaa_2d=3
+
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="C:/Users/wesle/Videos/Captures/algocity.avi"
