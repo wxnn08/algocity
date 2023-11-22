@@ -1,18 +1,15 @@
 extends Control
 class_name SelectMenu
 
-func add_button() -> void:
-	print("Add button")
-	pass
-	#var group_select_container = $HBoxContainer/Control/MarginContainer/ScrollContainer/VBoxContainer
-	#for algorithm_group in group_icons:
-	#	var button = _create_button(algorithm_group)
-	#	group_select_container.add_child(button)
+@export var button_creator: PackedScene
+@export var buttons_location: Container
 
+func add_button(icon: Texture) -> void:
+	var button = _create_button(icon)
+	buttons_location.add_child(button)
 
-func _create_button(info):
-	pass
-	#var button := selection_button.instantiate()
-	##button.texture = info.texture
-	#button.custom_minimum_size = Vector2(100, 100)
-	#return button
+func _create_button(icon: Texture):
+	var button := button_creator.instantiate()
+	button.texture = icon
+	button.custom_minimum_size = Vector2(100, 100)
+	return button

@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://226ymxpvx0dh"]
+[gd_scene load_steps=3 format=3 uid="uid://226ymxpvx0dh"]
 
 [ext_resource type="Script" path="res://src/menu/general/simple_menu_lateral_selection.gd" id="1_ipm11"]
+[ext_resource type="PackedScene" uid="uid://drn6khtf61b06" path="res://src/menu/general/simple_button.tscn" id="2_1sd7k"]
 
-[node name="SelectMenu" type="Control"]
+[node name="SelectMenu" type="Control" node_paths=PackedStringArray("buttons_location")]
 custom_minimum_size = Vector2(110, 0)
 layout_mode = 3
 anchors_preset = 9
@@ -11,6 +12,8 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 3
 script = ExtResource("1_ipm11")
+button_creator = ExtResource("2_1sd7k")
+buttons_location = NodePath("MarginContainer/ScrollContainer/VBoxContainer")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

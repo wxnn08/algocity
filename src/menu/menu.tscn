@@ -40,4 +40,3 @@ layout_mode = 2
 [node name="Algorithms" parent="MarginContainer/TabContainer" instance=ExtResource("3_8s2ia")]
 visible = false
 layout_mode = 2
-group_icons = Array[Resource("res://src/resources/algorithm_group_icon.gd")]([])

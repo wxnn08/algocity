@@ -1,3 +1,10 @@
-res://src/menu/algorithms/menu_algorithms.tscn
+res://src/menu/menu.tscn
 res://themes/menu_general.tres
 res://themes/panel_button.tres
+res://src/menu/algorithms/menu_algorithms.tscn
+res://src/menu/general/menu_background.tscn
+res://src/menu/routines/menu_routines.tscn
+res://src/menu/general/simple_menu_lateral_selection.gd
+res://src/menu/algorithms/menu_algorithms.gd
+res://src/menu/general/simple_menu_lateral_selection.tscn
+res://src/menu/general/simple_button.tscn
