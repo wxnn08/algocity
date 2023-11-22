@@ -7,6 +7,5 @@ extends Control
 @export var background_menu: BackgroundMenu
 
 func _ready() -> void:
-	print(algorithm_group_icons)
 	for group_icon in algorithm_group_icons:
 		select_menu.add_button(group_icon.texture)
