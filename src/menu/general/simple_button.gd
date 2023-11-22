@@ -1,7 +1,5 @@
 extends Control
-class_name MenuGroupButton
-
-signal on_click
+class_name SimpleButton
 
 @export var texture: Texture
 @export var icon_node: Control

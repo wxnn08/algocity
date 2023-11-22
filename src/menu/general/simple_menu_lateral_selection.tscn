@@ -11,6 +11,7 @@ anchor_bottom = 1.0
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 3
+mouse_filter = 1
 script = ExtResource("1_ipm11")
 button_creator = ExtResource("2_1sd7k")
 buttons_location = NodePath("MarginContainer/ScrollContainer/VBoxContainer")

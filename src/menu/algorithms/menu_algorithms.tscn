@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_q5sj4")
 algorithm_group_icons = Array[Resource("res://src/resources/algorithm_group_icon.gd")]([ExtResource("2_xdl85"), ExtResource("3_eo44m")])
 algorithms = Array[ExtResource("4_krri1")]([SubResource("Resource_yywqg")])

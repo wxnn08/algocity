@@ -13,6 +13,7 @@ offset_right = -1052.0
 offset_bottom = -548.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_bwq0x")
 icon_node = NodePath("TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
 
@@ -23,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_default_cursor_shape = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureButton"]
 layout_mode = 1
@@ -31,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 10
@@ -59,3 +62,5 @@ size_flags_horizontal = 4
 texture = ExtResource("3_6elfd")
 expand_mode = 2
 stretch_mode = 4
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

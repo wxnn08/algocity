@@ -9,3 +9,4 @@ extends Control
 func _ready() -> void:
 	for group_icon in algorithm_group_icons:
 		select_menu.add_button(group_icon.texture)
+

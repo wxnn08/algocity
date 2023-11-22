@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://fshuq35meteh"]
+
+[ext_resource type="PackedScene" uid="uid://c4sggcomh1fu1" path="res://src/menu/menu.tscn" id="1_1t74a"]
+[ext_resource type="Script" path="res://src/MeshInstance3D.gd" id="2_j8da3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_efk5m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_366k2"]
+sky_top_color = Color(0, 0.458824, 0.780392, 1)
+sky_horizon_color = Color(0.760784, 0.627451, 0.513726, 1)
+sky_curve = 0.0512265
+ground_bottom_color = Color(0.2, 0.168627, 0.133333, 1)
+ground_horizon_color = Color(0.745098, 0.627451, 0.568627, 1)
+ground_curve = 0.00450625
+
+[sub_resource type="Sky" id="Sky_roo2a"]
+sky_material = SubResource("ProceduralSkyMaterial_366k2")
+
+[sub_resource type="Environment" id="Environment_bavpe"]
+background_mode = 2
+sky = SubResource("Sky_roo2a")
+
+[node name="Main" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="CanvasLayer" instance=ExtResource("1_1t74a")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_efk5m")
+script = ExtResource("2_j8da3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.979558, 0.201163, 0, -0.201163, 0.979558, 0, 1.10731, 3.32436)
+environment = SubResource("Environment_bavpe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.948357, 0.317205, 0, -0.317205, 0.948357, 0, 1.92439, 0)
