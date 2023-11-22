@@ -1,6 +1,3 @@
-res://menu_algorithms.gd
-res://menu_group_button.gd
-res://menu_group_button.tscn
-res://menu_algorithms.tscn
-res://algorithms/group_icon_find.tres
-res://algorithms/grou_icon_sort.tres
+res://src/menu/algorithms/menu_algorithms.tscn
+res://themes/menu_general.tres
+res://themes/panel_button.tres

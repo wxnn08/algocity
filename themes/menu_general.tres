@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ity5bljmt3gy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y32il"]
+draw_center = false
+
+[resource]
+TabContainer/constants/side_margin = 30
+TabContainer/font_sizes/font_size = 18
+TabContainer/styles/panel = SubResource("StyleBoxFlat_y32il")

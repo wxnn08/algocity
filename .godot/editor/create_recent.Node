@@ -1,7 +1,9 @@
+Control
+MarginContainer
+Label
 VBoxContainer
 Panel
 HBoxContainer
-MarginContainer
 CenterContainer
 ColorRect
 TextureButton
@@ -11,7 +13,6 @@ TextEdit
 CodeEdit
 RichTextLabel
 Node
-Label
 AspectRatioContainer
 ScrollContainer
 ReferenceRect

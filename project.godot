@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Algocity"
-run/main_scene="res://menu.tscn"
+run/main_scene="res://src/menu/menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Enums="*res://src/enums/enums.gd"
 
 [display]
 

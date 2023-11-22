@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AlgorithmGroupIcon" load_steps=3 format=3 uid="uid://d26ogldn1ba1q"]
+
+[ext_resource type="Script" path="res://src/resources/algorithm_group_icon.gd" id="1_v4vqq"]
+[ext_resource type="Texture2D" uid="uid://b1bp30gvh46n7" path="res://figma/icon_search.png" id="2_pypni"]
+
+[resource]
+script = ExtResource("1_v4vqq")
+algorithm_group = 1
+texture = ExtResource("2_pypni")

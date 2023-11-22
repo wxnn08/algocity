@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4sggcomh1fu1"]
+
+[ext_resource type="Theme" uid="uid://ity5bljmt3gy" path="res://themes/menu_general.tres" id="1_0ameo"]
+[ext_resource type="PackedScene" uid="uid://cv8fyyxwbvtuj" path="res://src/menu/routines/menu_routines.tscn" id="2_du7p4"]
+[ext_resource type="PackedScene" uid="uid://bp455bnyh7fe3" path="res://src/menu/algorithms/menu_algorithms.tscn" id="3_8s2ia"]
+
+[sub_resource type="GDScript" id="GDScript_avtd7"]
+script/source = "extends Control
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_avtd7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 125
+theme_override_constants/margin_bottom = 40
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_0ameo")
+tab_alignment = 2
+
+[node name="Routines" parent="MarginContainer/TabContainer" instance=ExtResource("2_du7p4")]
+layout_mode = 2
+
+[node name="Algorithms" parent="MarginContainer/TabContainer" instance=ExtResource("3_8s2ia")]
+visible = false
+layout_mode = 2
+group_icons = Array[Resource("res://src/resources/algorithm_group_icon.gd")]([])

@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://bp455bnyh7fe3"]
+
+[ext_resource type="Script" path="res://src/menu/algorithms/menu_algorithms.gd" id="1_q5sj4"]
+[ext_resource type="Resource" uid="uid://d26ogldn1ba1q" path="res://src/resources_instantiated/group_icon_find.tres" id="2_xdl85"]
+[ext_resource type="Resource" uid="uid://fmpdukfht3b4" path="res://src/resources_instantiated/group_icon_sort.tres" id="3_2prah"]
+[ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="4_gasng"]
+[ext_resource type="Script" path="res://src/resources/algorithm.gd" id="4_krri1"]
+[ext_resource type="PackedScene" uid="uid://drn6khtf61b06" path="res://src/menu/general/simple_button.tscn" id="4_u7bp4"]
+[ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="5_1xssl"]
+[ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="5_syd6h"]
+
+[sub_resource type="Resource" id="Resource_yywqg"]
+script = ExtResource("4_krri1")
+algorithm_name = "Default"
+algorithm_tag = 0
+algorithm_time_complexity = 0
+algorithm_space_complexity = 0
+algorithm_icon = ExtResource("4_gasng")
+algorithm_code = "asedasdasd"
+
+[node name="MenuAlgorithms" type="Control" node_paths=PackedStringArray("select_menu", "background_menu")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5sj4")
+group_icons = Array[Resource("res://src/resources/algorithm_group_icon.gd")]([ExtResource("3_2prah"), ExtResource("2_xdl85")])
+algorithms = Array[ExtResource("4_krri1")]([SubResource("Resource_yywqg")])
+select_menu = NodePath("HBoxContainer/SelectMenu")
+background_menu = NodePath("HBoxContainer/BackgroundMenu")
+selection_button = ExtResource("4_u7bp4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectMenu" parent="HBoxContainer" instance=ExtResource("5_syd6h")]
+layout_mode = 2
+
+[node name="BackgroundMenu" parent="HBoxContainer" instance=ExtResource("5_1xssl")]
+layout_mode = 2
+size_flags_vertical = 1
+tab_name = "Algorithms"
