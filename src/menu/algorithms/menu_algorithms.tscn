@@ -15,6 +15,7 @@ algorithm_tag = 0
 algorithm_time_complexity = 0
 algorithm_space_complexity = 0
 algorithm_icon = ExtResource("4_gasng")
+algorithm_price = 0
 algorithm_code = "asedasdasd"
 
 [node name="MenuAlgorithms" type="Control" node_paths=PackedStringArray("select_menu", "background_menu")]

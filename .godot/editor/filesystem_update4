@@ -8,3 +8,6 @@ res://src/menu/general/simple_menu_lateral_selection.gd
 res://src/menu/algorithms/menu_algorithms.gd
 res://src/menu/general/simple_menu_lateral_selection.tscn
 res://src/menu/general/simple_button.tscn
+res://src/menu/routines/menu_routines.gd
+res://src/resources/routine.gd
+res://src/resources/algorithm.gd
