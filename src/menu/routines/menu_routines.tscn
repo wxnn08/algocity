@@ -7,14 +7,14 @@
 [ext_resource type="Script" path="res://src/resources/routine_group.gd" id="3_sogmv"]
 [ext_resource type="Script" path="res://src/resources/routine.gd" id="4_63q06"]
 
-[sub_resource type="Resource" id="Resource_ai54j"]
+[sub_resource type="Resource" id="Resource_f5iy7"]
 script = ExtResource("3_sogmv")
-name = 0
+tag = 0
 icon = ExtResource("3_jrwqw")
 
-[sub_resource type="Resource" id="Resource_4yxhb"]
+[sub_resource type="Resource" id="Resource_v0jqu"]
 script = ExtResource("3_sogmv")
-name = 0
+tag = 1
 icon = ExtResource("3_jrwqw")
 
 [sub_resource type="Resource" id="Resource_4h71s"]
@@ -30,8 +30,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_kdky6")
-routine_group_icons = Array[ExtResource("3_sogmv")]([SubResource("Resource_ai54j"), SubResource("Resource_4yxhb")])
+routine_groups = Array[ExtResource("3_sogmv")]([SubResource("Resource_f5iy7"), SubResource("Resource_v0jqu")])
 routines = Array[ExtResource("4_63q06")]([SubResource("Resource_4h71s")])
 select_menu = NodePath("HBoxContainer/MenuSelect")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
@@ -49,3 +50,6 @@ layout_mode = 2
 
 [node name="BackgroundMenu" parent="HBoxContainer" instance=ExtResource("2_hdy4h")]
 layout_mode = 2
+mouse_filter = 1
+
+[connection signal="pressed" from="HBoxContainer/MenuSelect" to="." method="_on_menu_select_pressed"]

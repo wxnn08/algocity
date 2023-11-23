@@ -1,10 +1,10 @@
 res://src/main.tscn
-res://src/MeshInstance3D.gd
 res://themes/menu_general.tres
-res://themes/panel_button.tres
 res://src/menu/menu.tscn
 res://src/menu/algorithms/menu_algorithms.tscn
-res://src/menu/general/simple_menu_lateral_selection.tscn
-res://src/menu/general/simple_button.tscn
-res://src/menu/routines/menu_routines.tscn
 res://src/menu/algorithms/menu_algorithms.gd
+res://src/menu/routines/menu_routines.tscn
+res://src/menu/routines/menu_routines.gd
+res://src/resources/routine_group.gd
+res://src/menu/general/simple_menu_lateral_selection.tscn
+res://src/menu/general/simple_menu_lateral_selection.gd

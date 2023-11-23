@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_q5sj4")
-abcabc = Array[Resource("res://src/resources/algorithm_group.gd")]([ExtResource("2_xdl85"), ExtResource("3_eo44m")])
+algorithm_groups = Array[Resource("res://src/resources/algorithm_group.gd")]([ExtResource("2_xdl85"), ExtResource("3_eo44m")])
 select_menu = NodePath("HBoxContainer/SelectMenu")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
 
