@@ -1,22 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bp455bnyh7fe3"]
+[gd_scene load_steps=6 format=3 uid="uid://bp455bnyh7fe3"]
 
 [ext_resource type="Script" path="res://src/menu/algorithms/menu_algorithms.gd" id="1_q5sj4"]
 [ext_resource type="Resource" uid="uid://d26ogldn1ba1q" path="res://src/resources_instantiated/group_icon_find.tres" id="2_xdl85"]
 [ext_resource type="Resource" uid="uid://fmpdukfht3b4" path="res://src/resources_instantiated/group_icon_sort.tres" id="3_eo44m"]
-[ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="4_gasng"]
-[ext_resource type="Script" path="res://src/resources/algorithm.gd" id="4_krri1"]
 [ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="5_1xssl"]
 [ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="5_syd6h"]
-
-[sub_resource type="Resource" id="Resource_yywqg"]
-script = ExtResource("4_krri1")
-algorithm_name = "Default"
-algorithm_tag = 0
-algorithm_time_complexity = 0
-algorithm_space_complexity = 0
-algorithm_icon = ExtResource("4_gasng")
-algorithm_price = 0
-algorithm_code = "asedasdasd"
 
 [node name="MenuAlgorithms" type="Control" node_paths=PackedStringArray("select_menu", "background_menu")]
 layout_mode = 3
@@ -25,10 +13,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_q5sj4")
-algorithm_group_icons = Array[Resource("res://src/resources/algorithm_group_icon.gd")]([ExtResource("2_xdl85"), ExtResource("3_eo44m")])
-algorithms = Array[ExtResource("4_krri1")]([SubResource("Resource_yywqg")])
+abcabc = Array[Resource("res://src/resources/algorithm_group.gd")]([ExtResource("2_xdl85"), ExtResource("3_eo44m")])
 select_menu = NodePath("HBoxContainer/SelectMenu")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
 
@@ -39,11 +26,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+mouse_default_cursor_shape = 5
 
 [node name="SelectMenu" parent="HBoxContainer" instance=ExtResource("5_syd6h")]
 layout_mode = 2
+mouse_default_cursor_shape = 3
 
 [node name="BackgroundMenu" parent="HBoxContainer" instance=ExtResource("5_1xssl")]
 layout_mode = 2
 size_flags_vertical = 1
+mouse_filter = 2
+mouse_default_cursor_shape = 3
 tab_name = "Algorithms"
+
+[connection signal="pressed" from="HBoxContainer/SelectMenu" to="." method="_on_select_menu_pressed"]

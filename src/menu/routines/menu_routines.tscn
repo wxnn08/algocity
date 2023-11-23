@@ -1,21 +1,21 @@
 [gd_scene load_steps=10 format=3 uid="uid://cv8fyyxwbvtuj"]
 
 [ext_resource type="Script" path="res://src/menu/routines/menu_routines.gd" id="1_kdky6"]
-[ext_resource type="Script" path="res://src/resources/routine_group_icon.gd" id="2_4gpmf"]
 [ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="2_hdy4h"]
 [ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="2_yvk8q"]
 [ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="3_jrwqw"]
+[ext_resource type="Script" path="res://src/resources/routine_group.gd" id="3_sogmv"]
 [ext_resource type="Script" path="res://src/resources/routine.gd" id="4_63q06"]
 
 [sub_resource type="Resource" id="Resource_ai54j"]
-script = ExtResource("2_4gpmf")
-routine_group = 0
-texture = ExtResource("3_jrwqw")
+script = ExtResource("3_sogmv")
+name = 0
+icon = ExtResource("3_jrwqw")
 
 [sub_resource type="Resource" id="Resource_4yxhb"]
-script = ExtResource("2_4gpmf")
-routine_group = 1
-texture = ExtResource("3_jrwqw")
+script = ExtResource("3_sogmv")
+name = 0
+icon = ExtResource("3_jrwqw")
 
 [sub_resource type="Resource" id="Resource_4h71s"]
 script = ExtResource("4_63q06")
@@ -31,7 +31,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kdky6")
-routine_group_icons = Array[ExtResource("2_4gpmf")]([SubResource("Resource_ai54j"), SubResource("Resource_4yxhb")])
+routine_group_icons = Array[ExtResource("3_sogmv")]([SubResource("Resource_ai54j"), SubResource("Resource_4yxhb")])
 routines = Array[ExtResource("4_63q06")]([SubResource("Resource_4h71s")])
 select_menu = NodePath("HBoxContainer/MenuSelect")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")

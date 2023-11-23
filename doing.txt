@@ -1,0 +1,1 @@
+fazer botões da lateral do menu funcionarem
