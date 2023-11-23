@@ -5,8 +5,9 @@
 ### Prioritário
 
 - [x] fazer botões da lateral do menu funcionarem
-- [ ] alterar titulo das tabs através do menu lateral
+- [x] alterar titulo das tabs através do menu lateral
 - [ ] criar esqueleto da tela de rotinas
+	- [ ] criar routine step
 - [ ] criar esqueleto da tela de algoritmos
 
 ### Talvez

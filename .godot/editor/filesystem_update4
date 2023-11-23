@@ -13,3 +13,5 @@ res://doing.txt
 res://src/resources/algorithm_group.gd
 res://src/resources_instantiated/group_icon_find.tres
 res://src/resources_instantiated/group_icon_sort.tres
+res://src/menu/general/routine_step.tscn
+res://src/menu/general/routine_step.gd

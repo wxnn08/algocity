@@ -1,1 +1,1 @@
-alterar titulo das tabs através do menu lateral
+criar esqueleto da tela de rotinas -> criar routine step
