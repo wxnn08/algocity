@@ -8,3 +8,8 @@ res://src/menu/routines/menu_routines.gd
 res://src/resources/routine_group.gd
 res://src/menu/general/simple_menu_lateral_selection.tscn
 res://src/menu/general/simple_menu_lateral_selection.gd
+res://README.md
+res://doing.txt
+res://src/resources/algorithm_group.gd
+res://src/resources_instantiated/group_icon_find.tres
+res://src/resources_instantiated/group_icon_sort.tres

@@ -7,3 +7,4 @@
 script = ExtResource("1_n3rcw")
 tag = 0
 icon = ExtResource("2_hlf8q")
+label = "Sorting"

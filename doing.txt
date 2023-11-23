@@ -1,1 +1,1 @@
-fazer botões da lateral do menu funcionarem
+alterar titulo das tabs através do menu lateral

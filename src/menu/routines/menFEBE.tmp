@@ -11,13 +11,11 @@
 script = ExtResource("3_sogmv")
 tag = 0
 icon = ExtResource("3_jrwqw")
-label = "Arrumar prateleira"
 
 [sub_resource type="Resource" id="Resource_v0jqu"]
 script = ExtResource("3_sogmv")
 tag = 1
 icon = ExtResource("3_jrwqw")
-label = "Cobrar no caixa"
 
 [sub_resource type="Resource" id="Resource_4h71s"]
 script = ExtResource("4_63q06")

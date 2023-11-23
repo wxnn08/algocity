@@ -7,3 +7,4 @@
 script = ExtResource("1_v4vqq")
 tag = 1
 icon = ExtResource("2_pypni")
+label = "Finding"
