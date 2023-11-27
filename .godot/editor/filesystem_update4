@@ -1,9 +1,8 @@
-res://src/main.tscn
+res://src/menu/general/simple_button.tscn
 res://themes/menu_general.tres
+res://src/main.tscn
 res://src/menu/menu.tscn
 res://src/menu/algorithms/menu_algorithms.tscn
-res://src/menu/routines/menu_routines.tscn
-res://src/menu/general/simple_menu_lateral_selection.tscn
 res://src/menu/general/routine_step.tscn
-res://src/menu/general/menu_background.tscn
-res://doing.txt
+res://algorithm_unlock.tscn
+res://src/menu/general/simple_button.gd

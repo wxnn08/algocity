@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq0nmkirtdy45"]
+
+[ext_resource type="PackedScene" uid="uid://drn6khtf61b06" path="res://src/menu/general/simple_button.tscn" id="1_qfcqm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+border_width = 3.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ReferenceRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+border_color = Color(0, 0.65098, 0.0470588, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="MenuGroupButton" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_qfcqm")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
+
+[node name="MenuGroupButton2" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
+icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
+
+[node name="MenuGroupButton3" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
+icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
+
+[node name="MenuGroupButton4" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+stretch_mode = 0
+icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+border_color = Color(0, 0.576471, 0.819608, 1)
+border_width = 3.0

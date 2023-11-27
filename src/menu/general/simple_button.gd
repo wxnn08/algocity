@@ -8,5 +8,5 @@ signal pressed_with_reference(reference)
 func _ready() -> void:
 	icon_node.texture = texture
 
-func _on_pressed() -> void:
+func _on_texture_button_pressed() -> void:
 	pressed_with_reference.emit(self)

@@ -1,8 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp455bnyh7fe3"]
+[gd_scene load_steps=10 format=3 uid="uid://bp455bnyh7fe3"]
 
 [ext_resource type="Script" path="res://src/menu/algorithms/menu_algorithms.gd" id="1_q5sj4"]
+[ext_resource type="Texture2D" uid="uid://b1bp30gvh46n7" path="res://figma/icon_search.png" id="2_erfyw"]
+[ext_resource type="Script" path="res://src/resources/algorithm.gd" id="3_6iugg"]
+[ext_resource type="Texture2D" uid="uid://bjggbnrgdqpuf" path="res://figma/icon_sort.png" id="4_f38m5"]
+[ext_resource type="PackedScene" uid="uid://bq0nmkirtdy45" path="res://algorithm_unlock.tscn" id="4_oe3na"]
 [ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="5_1xssl"]
 [ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="5_syd6h"]
+
+[sub_resource type="Resource" id="Resource_mtvwf"]
+script = ExtResource("3_6iugg")
+label = "Search"
+icon = ExtResource("2_erfyw")
+tag = 1
+time_complexity = 0
+space_complexity = 0
+price = 0
+code = ""
+
+[sub_resource type="Resource" id="Resource_08bq6"]
+script = ExtResource("3_6iugg")
+label = "Sort"
+icon = ExtResource("4_f38m5")
+tag = 0
+time_complexity = 0
+space_complexity = 0
+price = 0
+code = ""
 
 [node name="MenuAlgorithms" type="Control" node_paths=PackedStringArray("select_menu", "background_menu")]
 layout_mode = 3
@@ -13,6 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_q5sj4")
+algorithms = Array[ExtResource("3_6iugg")]([SubResource("Resource_mtvwf"), SubResource("Resource_08bq6")])
 select_menu = NodePath("HBoxContainer/SelectMenu")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
 
@@ -24,11 +49,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-mouse_default_cursor_shape = 5
 
 [node name="SelectMenu" parent="HBoxContainer" instance=ExtResource("5_syd6h")]
 layout_mode = 2
-mouse_default_cursor_shape = 3
 
 [node name="BackgroundMenu" parent="HBoxContainer" instance=ExtResource("5_1xssl")]
 layout_mode = 2
@@ -36,5 +59,6 @@ size_flags_vertical = 1
 mouse_filter = 2
 mouse_default_cursor_shape = 3
 tab_name = "Algorithms"
+body_content = ExtResource("4_oe3na")
 
 [connection signal="pressed" from="HBoxContainer/SelectMenu" to="." method="_on_select_menu_pressed"]

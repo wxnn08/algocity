@@ -21,6 +21,10 @@ Enums="*res://src/enums/enums.gd"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/quality/msaa_2d=3
 
 [editor]
