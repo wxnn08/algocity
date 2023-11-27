@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq0nmkirtdy45"]
+[gd_scene load_steps=3 format=3 uid="uid://bq0nmkirtdy45"]
 
 [ext_resource type="PackedScene" uid="uid://drn6khtf61b06" path="res://src/menu/general/simple_button.tscn" id="1_qfcqm"]
+[ext_resource type="Texture2D" uid="uid://bjggbnrgdqpuf" path="res://figma/icon_sort.png" id="2_2r2ix"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -58,50 +59,28 @@ layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+size_flags_vertical = 4
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer"]
 layout_mode = 2
+vertical_scroll_mode = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="MenuGroupButton" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_qfcqm")]
-custom_minimum_size = Vector2(150, 0)
+[node name="MenuGroupButton3" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_qfcqm")]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-stretch_mode = 0
-
-[node name="MenuGroupButton2" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 1
-stretch_mode = 0
-icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
-
-[node name="MenuGroupButton3" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 1
-stretch_mode = 0
-icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
-
-[node name="MenuGroupButton4" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" node_paths=PackedStringArray("icon_node") instance=ExtResource("1_qfcqm")]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 1
-stretch_mode = 0
-icon_node = NodePath("../MenuGroupButton/TextureButton/MarginContainer/Panel/MarginContainer/TextureRect")
+stretch_mode = 1
+texture = ExtResource("2_2r2ix")
 
 [node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
