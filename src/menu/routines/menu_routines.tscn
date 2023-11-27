@@ -1,31 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv8fyyxwbvtuj"]
+[gd_scene load_steps=6 format=3 uid="uid://cv8fyyxwbvtuj"]
 
 [ext_resource type="Script" path="res://src/menu/routines/menu_routines.gd" id="1_kdky6"]
 [ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="2_hdy4h"]
 [ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="2_yvk8q"]
-[ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="3_jrwqw"]
-[ext_resource type="Script" path="res://src/resources/routine_group.gd" id="3_sogmv"]
 [ext_resource type="Script" path="res://src/resources/routine.gd" id="4_63q06"]
-[ext_resource type="PackedScene" uid="uid://c024clk0f6e7j" path="res://src/menu/general/routine_step.tscn" id="7_lj5fn"]
-[ext_resource type="Texture2D" uid="uid://b1bp30gvh46n7" path="res://figma/icon_search.png" id="8_s5pgl"]
-
-[sub_resource type="Resource" id="Resource_f5iy7"]
-script = ExtResource("3_sogmv")
-tag = 0
-icon = ExtResource("3_jrwqw")
-label = "Arrumar prateleira"
-
-[sub_resource type="Resource" id="Resource_v0jqu"]
-script = ExtResource("3_sogmv")
-tag = 1
-icon = ExtResource("3_jrwqw")
-label = "Cobrar no caixa"
 
 [sub_resource type="Resource" id="Resource_4h71s"]
 script = ExtResource("4_63q06")
-routine_name = "Begin"
-routine_tag = 0
-routine_order = Array[int]([0, 1])
+label = "Default"
+tag = 0
+steps = Array[int]([])
 
 [node name="MenuRoutines" type="Control" node_paths=PackedStringArray("select_menu", "background_menu")]
 layout_mode = 3
@@ -36,7 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_kdky6")
-routine_groups = Array[ExtResource("3_sogmv")]([SubResource("Resource_f5iy7"), SubResource("Resource_v0jqu")])
 routines = Array[ExtResource("4_63q06")]([SubResource("Resource_4h71s")])
 select_menu = NodePath("HBoxContainer/MenuSelect")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
@@ -55,15 +38,5 @@ layout_mode = 2
 [node name="BackgroundMenu" parent="HBoxContainer" instance=ExtResource("2_hdy4h")]
 layout_mode = 2
 mouse_filter = 1
-
-[node name="RoutineStep" parent="HBoxContainer/BackgroundMenu" instance=ExtResource("7_lj5fn")]
-layout_mode = 1
-offset_left = -216.0
-offset_top = 79.0
-offset_right = 253.0
-offset_bottom = -16.0
-group_name = "FIND"
-algorithm_name = "Linear Search"
-icon = ExtResource("8_s5pgl")
 
 [connection signal="pressed" from="HBoxContainer/MenuSelect" to="." method="_on_menu_select_pressed"]

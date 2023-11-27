@@ -1,1 +1,1 @@
-criar esqueleto da tela de rotinas -> criar routine step
+criar esqueleto da tela de algoritmos

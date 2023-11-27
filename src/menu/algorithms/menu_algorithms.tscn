@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp455bnyh7fe3"]
+[gd_scene load_steps=4 format=3 uid="uid://bp455bnyh7fe3"]
 
 [ext_resource type="Script" path="res://src/menu/algorithms/menu_algorithms.gd" id="1_q5sj4"]
-[ext_resource type="Resource" uid="uid://d26ogldn1ba1q" path="res://src/resources/resources_instantiated/group_icon_find.tres" id="2_r2oph"]
-[ext_resource type="Resource" uid="uid://fmpdukfht3b4" path="res://src/resources/resources_instantiated/group_icon_sort.tres" id="3_2icfc"]
 [ext_resource type="PackedScene" uid="uid://c1gm5py0gv4l0" path="res://src/menu/general/menu_background.tscn" id="5_1xssl"]
 [ext_resource type="PackedScene" uid="uid://226ymxpvx0dh" path="res://src/menu/general/simple_menu_lateral_selection.tscn" id="5_syd6h"]
 
@@ -15,7 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_q5sj4")
-algorithm_groups = Array[Resource("res://src/resources/algorithm_group.gd")]([ExtResource("2_r2oph"), ExtResource("3_2icfc")])
 select_menu = NodePath("HBoxContainer/SelectMenu")
 background_menu = NodePath("HBoxContainer/BackgroundMenu")
 
