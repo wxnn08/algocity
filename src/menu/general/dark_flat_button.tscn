@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="2_a81y4"]
 
 [node name="DarkFlatButton" type="Control" node_paths=PackedStringArray("icon_node")]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
