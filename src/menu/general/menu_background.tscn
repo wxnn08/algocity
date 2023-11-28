@@ -1,24 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1gm5py0gv4l0"]
+[gd_scene load_steps=2 format=3 uid="uid://c1gm5py0gv4l0"]
 
 [ext_resource type="Script" path="res://src/menu/general/menu_background.gd" id="1_e028p"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0rc4"]
-bg_color = Color(0.0823529, 0.156863, 0.188235, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-shadow_color = Color(0, 0, 0, 1)
-shadow_size = 1
-shadow_offset = Vector2(8, 7)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onks0"]
-bg_color = Color(0.152941, 0.258824, 0.305882, 1)
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 1)
-shadow_size = 1
-shadow_offset = Vector2(8, 7)
-
-[node name="BackgroundMenu" type="Control" node_paths=PackedStringArray("body_node")]
+[node name="BackgroundMenu" type="Control" node_paths=PackedStringArray("tab_label_node", "body_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,6 +12,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_e028p")
+tab_label_node = NodePath("MarginContainer/VBoxContainer/Header/MarginContainer/Label")
 body_node = NodePath("MarginContainer/VBoxContainer/Body")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -42,19 +27,14 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Header" type="Panel" parent="MarginContainer/VBoxContainer"]
+[node name="Header" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_d0rc4")
+theme_type_variation = &"MenuTitlePanel"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Header"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 theme_override_constants/margin_left = 25
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Header/MarginContainer"]
@@ -62,8 +42,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Tab name"
 
-[node name="Body" type="Panel" parent="MarginContainer/VBoxContainer"]
+[node name="Body" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_onks0")
+theme_type_variation = &"MenuBodyPanel"

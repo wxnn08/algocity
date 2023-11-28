@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4sggcomh1fu1"]
+[gd_scene load_steps=7 format=3 uid="uid://c4sggcomh1fu1"]
 
-[ext_resource type="Theme" uid="uid://ity5bljmt3gy" path="res://themes/menu_general.tres" id="1_0ameo"]
 [ext_resource type="PackedScene" uid="uid://cv8fyyxwbvtuj" path="res://src/menu/routines/menu_routines.tscn" id="2_du7p4"]
 [ext_resource type="PackedScene" uid="uid://bp455bnyh7fe3" path="res://src/menu/algorithms/menu_algorithms.tscn" id="3_8s2ia"]
 [ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="3_68lhb"]
@@ -40,7 +39,6 @@ offset_right = 743.0
 offset_bottom = 423.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_0ameo")
 tab_alignment = 2
 
 [node name="Routines" parent="TabContainer" instance=ExtResource("2_du7p4")]

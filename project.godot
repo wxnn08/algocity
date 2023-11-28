@@ -31,3 +31,8 @@ window/quality/msaa_2d=3
 
 movie_writer/mjpeg_quality=1.0
 movie_writer/movie_file="C:/Users/wesle/Videos/Captures/algocity.avi"
+
+[gui]
+
+theme/custom="res://themes/menu_general.tres"
+theme/custom_font="res://fonts/RopaSans-Regular.ttf"

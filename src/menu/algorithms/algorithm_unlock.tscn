@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bq0nmkirtdy45"]
 
-[ext_resource type="PackedScene" uid="uid://drn6khtf61b06" path="res://src/menu/general/simple_button.tscn" id="1_qfcqm"]
-[ext_resource type="Texture2D" uid="uid://bjggbnrgdqpuf" path="res://figma/icon_sort.png" id="2_2r2ix"]
+[ext_resource type="PackedScene" uid="uid://cmhakytblkku7" path="res://src/menu/general/dark_flat_button.tscn" id="1_e5ana"]
+[ext_resource type="Texture2D" uid="uid://bt702hqwk7pkl" path="res://icon.svg" id="2_ma04o"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -74,13 +74,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="MenuGroupButton3" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_qfcqm")]
-custom_minimum_size = Vector2(100, 100)
+[node name="DarkFlatButton" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_e5ana")]
 layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 1
-stretch_mode = 1
-texture = ExtResource("2_2r2ix")
+texture = ExtResource("2_ma04o")
 
 [node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2

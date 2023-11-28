@@ -1,8 +1,12 @@
-res://src/menu/general/simple_button.tscn
+res://src/menu/general/simple_menu_lateral_selection.tscn
 res://themes/menu_general.tres
-res://src/main.tscn
+res://src/menu/algorithms/algorithm_unlock.tscn
 res://src/menu/menu.tscn
+res://src/menu/routines/menu_routines.tscn
 res://src/menu/algorithms/menu_algorithms.tscn
-res://src/menu/general/routine_step.tscn
-res://algorithm_unlock.tscn
-res://src/menu/general/simple_button.gd
+res://src/menu/general/dark_flat_button.tscn
+res://themes/dark_flat_button.tres
+res://src/menu/general/light_flat_button.tscn
+res://themes/light_flat_button.tres
+res://src/menu/general/dark_shadow_button.tscn
+res://src/menu/general/light_shadow_button.tscn

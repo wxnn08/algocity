@@ -1,9 +1,28 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ity5bljmt3gy"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://ity5bljmt3gy"]
+
+[ext_resource type="StyleBox" uid="uid://duqw2toof1po0" path="res://themes/dark_flat_button.tres" id="1_ik4s5"]
+[ext_resource type="StyleBox" uid="uid://bxq23imihxnpp" path="res://themes/menu_body_panel.tres" id="1_v41dx"]
+[ext_resource type="StyleBox" uid="uid://d8k3r4g1uh4i" path="res://themes/dark_shadow_button.tres" id="2_bpgb0"]
+[ext_resource type="StyleBox" uid="uid://cs8yv6psoxfmm" path="res://themes/light_flat_button.tres" id="2_nljlg"]
+[ext_resource type="StyleBox" uid="uid://vweku4hf5bfg" path="res://themes/menu_title_panel.tres" id="4_26gjy"]
+[ext_resource type="StyleBox" uid="uid://5l2d37fb5qqk" path="res://themes/light_shadow_button.tres" id="4_in0c8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y32il"]
 draw_center = false
 
 [resource]
+DarkFlatButton/base_type = &"PanelContainer"
+DarkFlatButton/styles/panel = ExtResource("1_ik4s5")
+DarkShadowButton/base_type = &"PanelContainer"
+DarkShadowButton/styles/panel = ExtResource("2_bpgb0")
+LightFlatButton/base_type = &"PanelContainer"
+LightFlatButton/styles/panel = ExtResource("2_nljlg")
+LightShadowButton/base_type = &"PanelContainer"
+LightShadowButton/styles/panel = ExtResource("4_in0c8")
+MenuBodyPanel/base_type = &"PanelContainer"
+MenuBodyPanel/styles/panel = ExtResource("1_v41dx")
+MenuTitlePanel/base_type = &"PanelContainer"
+MenuTitlePanel/styles/panel = ExtResource("4_26gjy")
 TabContainer/constants/side_margin = 30
 TabContainer/font_sizes/font_size = 18
 TabContainer/styles/panel = SubResource("StyleBoxFlat_y32il")

@@ -1,5 +1,5 @@
 extends Control
-class_name SimpleButton
+class_name CustomButton
 signal pressed_with_reference(reference)
 
 @export var texture: Texture
@@ -7,6 +7,6 @@ signal pressed_with_reference(reference)
 
 func _ready() -> void:
 	icon_node.texture = texture
-
+	
 func _on_texture_button_pressed() -> void:
 	pressed_with_reference.emit(self)

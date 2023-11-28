@@ -14,7 +14,7 @@ func add_button(id:int, icon: Texture) -> void:
 
 
 func _create_button(icon: Texture):
-	var button := button_creator.instantiate() as SimpleButton
+	var button := button_creator.instantiate() as CustomButton
 	button.texture = icon
 	button.custom_minimum_size = Vector2(100, 100)
 	button.pressed_with_reference.connect(_on_child_button_pressed)
