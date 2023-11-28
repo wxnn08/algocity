@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://ity5bljmt3gy"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://ity5bljmt3gy"]
 
 [ext_resource type="StyleBox" uid="uid://duqw2toof1po0" path="res://themes/dark_flat_button.tres" id="1_ik4s5"]
 [ext_resource type="StyleBox" uid="uid://bxq23imihxnpp" path="res://themes/menu_body_panel.tres" id="1_v41dx"]
@@ -7,10 +7,19 @@
 [ext_resource type="StyleBox" uid="uid://vweku4hf5bfg" path="res://themes/menu_title_panel.tres" id="4_26gjy"]
 [ext_resource type="StyleBox" uid="uid://5l2d37fb5qqk" path="res://themes/light_shadow_button.tres" id="4_in0c8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvc8q"]
+bg_color = Color(0.0823529, 0.156863, 0.188235, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y32il"]
 draw_center = false
 
 [resource]
+CodePanel/base_type = &"PanelContainer"
+CodePanel/styles/panel = SubResource("StyleBoxFlat_mvc8q")
 DarkFlatButton/base_type = &"PanelContainer"
 DarkFlatButton/styles/panel = ExtResource("1_ik4s5")
 DarkShadowButton/base_type = &"PanelContainer"

@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq0nmkirtdy45"]
+[gd_scene load_steps=4 format=3 uid="uid://bq0nmkirtdy45"]
 
+[ext_resource type="FontFile" uid="uid://dx66godbxt0hj" path="res://fonts/RedHatMono-VariableFont_wght.ttf" id="1_agjr1"]
 [ext_resource type="PackedScene" uid="uid://cmhakytblkku7" path="res://src/menu/general/dark_flat_button.tscn" id="1_e5ana"]
 [ext_resource type="Texture2D" uid="uid://dorfhi5hchjb6" path="res://figma/icon_locked.png" id="2_min3p"]
 
@@ -53,9 +54,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"CodePanel"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_agjr1")
+theme_override_fonts/bold_font = ExtResource("1_agjr1")
+theme_override_fonts/italics_font = ExtResource("1_agjr1")
+theme_override_fonts/bold_italics_font = ExtResource("1_agjr1")
+theme_override_fonts/mono_font = ExtResource("1_agjr1")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+bbcode_enabled = true
+text = "[b]def[/b] selectionSort():   for k in range(n):       indexMin = k       for j in range(k+1, n):           if intArray[j] < intArray[indexMin]:               indexMin = j       if indexMin != k:           temp = intArray[indexMin]           intArray[indexMin] = intArray[k]           intArray[k] = temp"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer"]
 layout_mode = 2
