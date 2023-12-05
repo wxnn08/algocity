@@ -7,7 +7,7 @@ signal pressed(id: int)
 
 var button_id: Dictionary
 
-func add_button(id:int, icon: Texture) -> void:
+func add_button(id:String, icon: Texture) -> void:
 	var button = _create_button(icon)
 	button_id[button] = id
 	buttons_location.add_child(button)

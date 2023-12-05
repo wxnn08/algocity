@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AlgorithmTheme" load_steps=5 format=3 uid="uid://dy6c5tqardrrg"]
+
+[ext_resource type="Resource" uid="uid://drftfrgqctkxi" path="res://src/resources/instantiated/dfs.tres" id="1_61v5f"]
+[ext_resource type="Texture2D" uid="uid://b2ojckco3aso7" path="res://figma/icon_dfs.png" id="1_h4xh6"]
+[ext_resource type="Script" path="res://src/resources/algorithm_theme.gd" id="1_rdfay"]
+[ext_resource type="Resource" uid="uid://nxbaqsbtew2m" path="res://src/resources/instantiated/bfs.tres" id="2_urcv7"]
+
+[resource]
+script = ExtResource("1_rdfay")
+label = "Finding"
+theme = 1
+icon = ExtResource("1_h4xh6")
+algorithms = Array[Resource("res://src/resources/algorithm.gd")]([ExtResource("1_61v5f"), ExtResource("2_urcv7")])

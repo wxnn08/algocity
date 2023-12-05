@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Algorithm" load_steps=3 format=3 uid="uid://nxbaqsbtew2m"]
+
+[ext_resource type="Texture2D" uid="uid://b0ggin0ej646d" path="res://figma/icon_bfs.png" id="1_mr0ph"]
+[ext_resource type="Script" path="res://src/resources/algorithm.gd" id="1_yjj55"]
+
+[resource]
+script = ExtResource("1_yjj55")
+label = "BFS"
+icon = ExtResource("1_mr0ph")
+tag = 1
+time_complexity = 5
+space_complexity = 1
+price = 1300
+code = "procedure BFS(G, root) is
+	let Q be a queue
+	label root as explored
+	Q.enqueue(root)
+	 while Q is not empty do
+	 	v := Q.dequeue()
+		if v is the goal then
+			return v
+		for all edges from v to w in G.adjacentEdges(v) do
+			if w is not labeled as explored then
+				label w as explored
+				w.parent := v
+				Q.enqueue(w)"

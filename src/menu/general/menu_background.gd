@@ -13,3 +13,6 @@ func _ready() -> void:
 
 func update_tab_name(text: String) -> void:
 	tab_label_node.text = text
+
+func update_body_content(theme: AlgorithmTheme) -> void:
+	pass
