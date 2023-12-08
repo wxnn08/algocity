@@ -6,6 +6,7 @@ env:
   EXPORT_NAME: algocity
   PROJECT_PATH: algocity
 
+jobs:
   export-linux:
     name: Linux Export
     runs-on: ubuntu-20.04
