@@ -1,8 +1,6 @@
-res://src/menu/general/simple_menu_lateral_selection.tscn
+res://src/menu/algorithms/algorithm_unlock.tscn
 res://themes/menu_general.tres
 res://src/resources/instantiated/sort_theme.tres
 res://src/resources/instantiated/find_theme.tres
-res://src/menu/algorithms/menu_algorithms.tscn
-res://src/menu/algorithms/algorithm_unlock.tscn
 res://src/menu/general/menu_background.tscn
-res://src/menu/algorithms/menu_algorithms.gd
+res://src/menu/algorithms/menu_algorithms.tscn

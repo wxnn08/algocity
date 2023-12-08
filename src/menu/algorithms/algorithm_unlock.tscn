@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://src/menu/algorithms/algorithm_unlock.gd" id="1_whef6"]
 [ext_resource type="Texture2D" uid="uid://dorfhi5hchjb6" path="res://figma/icon_locked.png" id="2_min3p"]
 
-[node name="AlgorithmUnlock" type="Control"]
+[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_whef6")
+code_text_node = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer/RichTextLabel")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
