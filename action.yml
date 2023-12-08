@@ -1,0 +1,8 @@
+name: algocity
+author: wxnn08
+branding:
+  color: gray-dark
+  icon: git-merge
+runs:
+  using: "docker"
+  image: "docker://barichello/godot-ci"
