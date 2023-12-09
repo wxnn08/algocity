@@ -1,5 +1,8 @@
 name: Godot Export
-on: push
+on:
+  push:
+    tags:
+      - "v*-test"
 
 jobs:
   # job id, can be anything
