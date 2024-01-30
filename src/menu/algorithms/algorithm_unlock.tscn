@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq0nmkirtdy45"]
+[gd_scene load_steps=4 format=3 uid="uid://bq0nmkirtdy45"]
 
 [ext_resource type="FontFile" uid="uid://dx66godbxt0hj" path="res://fonts/RedHatMono-VariableFont_wght.ttf" id="1_agjr1"]
-[ext_resource type="PackedScene" uid="uid://cmhakytblkku7" path="res://src/menu/general/dark_flat_button.tscn" id="1_e5ana"]
 [ext_resource type="Script" path="res://src/menu/algorithms/algorithm_unlock.gd" id="1_whef6"]
-[ext_resource type="Texture2D" uid="uid://dorfhi5hchjb6" path="res://figma/icon_locked.png" id="2_min3p"]
+[ext_resource type="PackedScene" uid="uid://dt5s0tc8d2n2p" path="res://src/menu/general/dark_shadow_button.tscn" id="2_8532u"]
 
-[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node")]
+[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node", "algorithm_selection_spawn_node")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_whef6")
 code_text_node = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer/RichTextLabel")
+algorithm_selection_spawn_node = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer")
+algorithm_button = ExtResource("2_8532u")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -98,22 +99,6 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_constants/separation = 20
-
-[node name="DarkFlatButton" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_e5ana")]
-layout_mode = 2
-texture = ExtResource("2_min3p")
-
-[node name="DarkFlatButton2" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_e5ana")]
-layout_mode = 2
-texture = ExtResource("2_min3p")
-
-[node name="DarkFlatButton3" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_e5ana")]
-layout_mode = 2
-texture = ExtResource("2_min3p")
-
-[node name="DarkFlatButton4" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_e5ana")]
-layout_mode = 2
-texture = ExtResource("2_min3p")
 
 [node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2

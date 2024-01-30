@@ -7,12 +7,13 @@
 script = ExtResource("1_yl6yq")
 label = "DFS"
 icon = ExtResource("1_s8st3")
-tag = 1
 time_complexity = 5
 space_complexity = 1
 price = 3250
-code = "procedure DFS(G, v) is
-    label v as discovered
-    for all directed edges from v to w that are in G.adjacentEdges(v) do
-        if vertex w is not labeled as discovered then
-            recursively call DFS(G, w)"
+owned = false
+code = "Algorithm DFS(G, v):  
+    visited[v] = true
+    for each u in G.Adjacent(v)  
+        if not visited[u]
+            DFS(G, u)
+"

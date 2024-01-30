@@ -19,7 +19,7 @@ func _update_body_using_group_id(themes: Array[AlgorithmTheme], id: String) -> v
 
 func _update_menu_tab_text(text: String) -> void:
 	background_menu.update_tab_name(text)
-	print(background_menu)
+	
 func _update_body_content(theme: AlgorithmTheme) -> void:
 	var algorithm_unlock = background_menu.body_content_instantiated
 	algorithm_unlock.load_theme(theme)

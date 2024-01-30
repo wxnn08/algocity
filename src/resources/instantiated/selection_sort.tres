@@ -7,8 +7,17 @@
 script = ExtResource("2_gpxk6")
 label = "Selection Sort"
 icon = ExtResource("1_xoal0")
-tag = 0
 time_complexity = 2
 space_complexity = 0
 price = 300
-code = "def selectionSort():   for k in range(n):       indexMin = k       for j in range(k+1, n):           if intArray[j] < intArray[indexMin]:               indexMin = j       if indexMin != k:           temp = intArray[indexMin]           intArray[indexMin] = intArray[k]           intArray[k] = temp"
+owned = false
+code = "Algorithm SelectionSort(A):
+    n = length(A)
+    for i = 1 to n-1
+        minIndex = i
+        for j = i+1 to n
+            if A[j] < A[minIndex]
+                minIndex = j
+        if minIndex != i
+            swap A[i] and A[minIndex]
+"

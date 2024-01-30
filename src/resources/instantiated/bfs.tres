@@ -7,20 +7,17 @@
 script = ExtResource("1_yjj55")
 label = "BFS"
 icon = ExtResource("1_mr0ph")
-tag = 1
 time_complexity = 5
 space_complexity = 1
 price = 1300
-code = "procedure BFS(G, root) is
-	let Q be a queue
-	label root as explored
-	Q.enqueue(root)
-	 while Q is not empty do
-	 	v := Q.dequeue()
-		if v is the goal then
-			return v
-		for all edges from v to w in G.adjacentEdges(v) do
-			if w is not labeled as explored then
-				label w as explored
-				w.parent := v
-				Q.enqueue(w)"
+owned = false
+code = "Algorithm BFS(G, s):
+    create a queue Q
+    enqueue s onto Q
+    mark s as visited
+    while Q is not empty
+        v = Q.dequeue()
+        for each u in G.Adjacent(v)
+            if u is not visited
+                mark u as visited
+                enqueue u onto Q"
