@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq0nmkirtdy45"]
+[gd_scene load_steps=6 format=3 uid="uid://bq0nmkirtdy45"]
 
 [ext_resource type="FontFile" uid="uid://dx66godbxt0hj" path="res://fonts/RedHatMono-VariableFont_wght.ttf" id="1_agjr1"]
 [ext_resource type="Script" path="res://src/menu/algorithms/algorithm_unlock.gd" id="1_whef6"]
 [ext_resource type="PackedScene" uid="uid://dt5s0tc8d2n2p" path="res://src/menu/general/dark_shadow_button.tscn" id="2_8532u"]
+[ext_resource type="Shader" path="res://src/shaders/blur2d.gdshader" id="3_4r11u"]
 
-[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node", "algorithm_selection_spawn_node")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_68mb8"]
+shader = ExtResource("3_4r11u")
+shader_parameter/blur_intensity = 0.0
+
+[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node", "algorithm_selection_spawn_node", "blur_rect")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +20,7 @@ script = ExtResource("1_whef6")
 code_text_node = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer/RichTextLabel")
 algorithm_selection_spawn_node = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/MarginContainer/ScrollContainer/HBoxContainer")
 algorithm_button = ExtResource("2_8532u")
+blur_rect = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer/Blur")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -74,13 +80,17 @@ theme_override_fonts/bold_font = ExtResource("1_agjr1")
 theme_override_fonts/italics_font = ExtResource("1_agjr1")
 theme_override_fonts/bold_italics_font = ExtResource("1_agjr1")
 theme_override_fonts/mono_font = ExtResource("1_agjr1")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
-theme_override_font_sizes/italics_font_size = 30
-theme_override_font_sizes/bold_italics_font_size = 30
-theme_override_font_sizes/mono_font_size = 30
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+theme_override_font_sizes/italics_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/mono_font_size = 32
 bbcode_enabled = true
 text = "[b]def[/b] selectionSort():   for k in range(n):       indexMin = k       for j in range(k+1, n):           if intArray[j] < intArray[indexMin]:               indexMin = j       if indexMin != k:           temp = intArray[indexMin]           intArray[indexMin] = intArray[k]           intArray[k] = temp"
+
+[node name="Blur" type="ColorRect" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer"]
+material = SubResource("ShaderMaterial_68mb8")
+layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer"]
 layout_mode = 2
