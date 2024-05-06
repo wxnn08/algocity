@@ -18,3 +18,10 @@ enum RoutineTag {
 	BEGIN,
 	END
 }
+
+enum AlgorithmStatus {
+	LOCKED,
+	UNLOCKED_UNAVAILABLE,
+	UNLOCKED_AVAILABLE,
+	ACTIVE
+}

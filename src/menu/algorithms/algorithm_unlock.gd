@@ -4,16 +4,13 @@ class_name AlgorithmUnlock
 @export var code_text_node: Control
 @export var algorithm_selection_spawn_node: Control
 @export var algorithm_button: PackedScene
+@export var blur_rect: Control
+@export var lock_texture: Control
 
 func load_theme(theme: AlgorithmTheme) -> void:
 	reset_current_theme()
-	var last_owned_algorithm = _get_last_owned_algorithm(theme)
-	load_algorithm(null, last_owned_algorithm)
+	load_algorithm(null, theme.algorithms[theme.active_algorithm_index])
 	_create_algorithm_selection_buttons(theme)
-
-func _get_last_owned_algorithm(theme: AlgorithmTheme) -> Algorithm:
-	#TODO
-	return theme.algorithms[0]
 
 func _create_algorithm_selection_buttons(theme: AlgorithmTheme) -> void:
 	for algorithm in theme.algorithms:
@@ -30,6 +27,14 @@ func reset_current_theme():
 	for child in algorithm_selection_spawn_node.get_children():
 		child.queue_free()
 
-func load_algorithm(button_reference, algorithm):
-	#TODO: apply other effects
+func load_algorithm(button_reference, algorithm: Algorithm):
+	var blur_intensity = 0 if algorithm.is_unlocked() else 1
+	set_blur_intensity(blur_intensity)
+	set_lock_texture_visibility(!algorithm.is_unlocked())
 	code_text_node.text = algorithm.code
+
+func set_blur_intensity(value: float):
+	blur_rect.material.set("shader_parameter/blur_intensity", value)
+
+func set_lock_texture_visibility(value: bool):
+	lock_texture.visible = value

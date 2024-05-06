@@ -11,3 +11,4 @@ label = "Finding"
 theme = 1
 icon = ExtResource("1_h4xh6")
 algorithms = Array[Resource("res://src/resources/algorithm.gd")]([ExtResource("1_61v5f"), ExtResource("2_urcv7")])
+active_algorithm_index = 0

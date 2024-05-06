@@ -5,3 +5,4 @@ class_name AlgorithmTheme
 @export var theme: Enums.AlgorithmTag
 @export var icon: Texture
 @export var algorithms: Array[Algorithm]
+@export var active_algorithm_index: int
