@@ -11,3 +11,4 @@ label = "Sorting"
 theme = 0
 icon = ExtResource("3_ftmy2")
 algorithms = Array[Resource("res://src/resources/algorithm.gd")]([ExtResource("1_txcbe"), ExtResource("2_h27r5")])
+active_algorithm_index = 0
