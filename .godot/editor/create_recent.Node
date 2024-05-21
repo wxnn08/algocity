@@ -1,5 +1,11 @@
 MarginContainer
+Button
+Label
+VBoxContainer
+CenterContainer
+CustomButton
+TextureButton
+RichTextLabel
 TextureRect
 ColorRect
 Control
-Label

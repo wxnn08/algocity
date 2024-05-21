@@ -6,6 +6,8 @@ class_name AlgorithmUnlock
 @export var algorithm_button: PackedScene
 @export var blur_rect: Control
 @export var lock_texture: Control
+@export var buy_menu: BuyAlgorithm
+
 
 func load_theme(theme: AlgorithmTheme) -> void:
 	reset_current_theme()
@@ -28,13 +30,30 @@ func reset_current_theme():
 		child.queue_free()
 
 func load_algorithm(button_reference, algorithm: Algorithm):
-	var blur_intensity = 0 if algorithm.is_unlocked() else 1
-	set_blur_intensity(blur_intensity)
-	set_lock_texture_visibility(!algorithm.is_unlocked())
-	code_text_node.text = algorithm.code
+	update_code_area(algorithm)
+	update_unlock_menu(algorithm)
 
 func set_blur_intensity(value: float):
 	blur_rect.material.set("shader_parameter/blur_intensity", value)
 
 func set_lock_texture_visibility(value: bool):
 	lock_texture.visible = value
+
+func update_code_area(algorithm: Algorithm):
+	var blur_intensity = 0 if algorithm.is_unlocked() else 1
+	set_blur_intensity(blur_intensity)
+	set_lock_texture_visibility(!algorithm.is_unlocked())
+	code_text_node.text = algorithm.code
+
+func update_unlock_menu(algorithm: Algorithm):
+	if(algorithm == null or algorithm.is_unlocked()):
+		buy_menu.hide()
+		return
+	buy_menu.show()
+	buy_menu.button_value(algorithm.price)
+	buy_menu.on_unlock_pressed(unlock_button_pressed.bind(algorithm))
+	
+func unlock_button_pressed(algorithm: Algorithm):
+	algorithm.unlock()
+	load_algorithm(null, algorithm)
+	

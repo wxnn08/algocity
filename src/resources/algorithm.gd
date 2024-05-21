@@ -11,3 +11,6 @@ class_name Algorithm
 
 func is_unlocked():
 	return status != Enums.AlgorithmStatus.LOCKED
+
+func unlock():
+	status = Enums.AlgorithmStatus.UNLOCKED_UNAVAILABLE

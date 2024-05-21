@@ -1,16 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq0nmkirtdy45"]
+[gd_scene load_steps=8 format=3 uid="uid://bq0nmkirtdy45"]
 
 [ext_resource type="FontFile" uid="uid://dx66godbxt0hj" path="res://fonts/RedHatMono-VariableFont_wght.ttf" id="1_agjr1"]
 [ext_resource type="Script" path="res://src/menu/algorithms/algorithm_unlock.gd" id="1_whef6"]
 [ext_resource type="PackedScene" uid="uid://dt5s0tc8d2n2p" path="res://src/menu/general/dark_shadow_button.tscn" id="2_8532u"]
 [ext_resource type="Shader" path="res://src/shaders/blur2d.gdshader" id="3_4r11u"]
 [ext_resource type="Texture2D" uid="uid://dorfhi5hchjb6" path="res://figma/icon_locked.png" id="5_n7i4j"]
+[ext_resource type="PackedScene" uid="uid://byb1sqm0itlc3" path="res://src/menu/algorithms/buy_algorithm.tscn" id="6_1by76"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_68mb8"]
 shader = ExtResource("3_4r11u")
 shader_parameter/blur_intensity = 0.0
 
-[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node", "algorithm_selection_spawn_node", "blur_rect", "lock_texture")]
+[node name="AlgorithmUnlock" type="Control" node_paths=PackedStringArray("code_text_node", "algorithm_selection_spawn_node", "blur_rect", "lock_texture", "buy_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,6 +24,7 @@ algorithm_selection_spawn_node = NodePath("MarginContainer/HBoxContainer/Referen
 algorithm_button = ExtResource("2_8532u")
 blur_rect = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer/Blur")
 lock_texture = NodePath("MarginContainer/HBoxContainer/ReferenceRect/VBoxContainer/ReferenceRect/PanelContainer/MarginContainer2/LockTexture")
+buy_menu = NodePath("MarginContainer/HBoxContainer/MarginContainer/BuyMenu")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -128,8 +130,13 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_constants/separation = 20
 
-[node name="ReferenceRect2" type="ReferenceRect" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-border_color = Color(0, 0.576471, 0.819608, 1)
-border_width = 3.0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="BuyMenu" parent="MarginContainer/HBoxContainer/MarginContainer" instance=ExtResource("6_1by76")]
+layout_mode = 2
