@@ -1,6 +1,5 @@
-res://src/menu/algorithms/algorithm_unlock.tscn
+res://src/menu/algorithms/buy_algorithm.tscn
 res://themes/menu_general.tres
 res://src/shaders/blur2d.gdshader
-res://src/menu/algorithms/buy_algorithm.tscn
-res://src/menu/algorithms/buy_algorithm.gd
+res://src/menu/algorithms/algorithm_unlock.tscn
 res://src/menu/algorithms/algorithm_unlock.gd

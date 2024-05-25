@@ -54,6 +54,9 @@ func update_unlock_menu(algorithm: Algorithm):
 	buy_menu.on_unlock_pressed(unlock_button_pressed.bind(algorithm))
 	
 func unlock_button_pressed(algorithm: Algorithm):
-	algorithm.unlock()
-	load_algorithm(null, algorithm)
-	
+	if(can_buy_algorithm(algorithm)):
+		algorithm.unlock()
+		load_algorithm(null, algorithm)
+
+func can_buy_algorithm(algorithm: Algorithm) -> bool:
+	return true
