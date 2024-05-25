@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://byb1sqm0itlc3"]
+
+[ext_resource type="Script" path="res://src/menu/algorithms/buy_algorithm.gd" id="1_43flm"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("buy_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_43flm")
+buy_button = NodePath("VBoxContainer/Button")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "BUY TO
+ANALYSE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "$ VALUE"
