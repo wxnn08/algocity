@@ -7,10 +7,10 @@
 script = ExtResource("2_s2fjw")
 label = "Bubble Sort"
 icon = ExtResource("1_qe2sh")
-time_complexity = 2
-space_complexity = 0
+time_complexity = "n2"
+space_complexity = "1"
 price = 700
-owned = false
+status = 0
 code = "Algorithm BubbleSort(A):
     n = length(A)
     for i = 1 to n-1

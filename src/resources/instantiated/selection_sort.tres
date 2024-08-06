@@ -7,8 +7,8 @@
 script = ExtResource("2_gpxk6")
 label = "Selection Sort"
 icon = ExtResource("1_xoal0")
-time_complexity = 2
-space_complexity = 0
+time_complexity = "n2"
+space_complexity = "1"
 price = 300
 status = 1
 code = "Algorithm SelectionSort(A):

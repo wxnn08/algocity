@@ -8,12 +8,16 @@ func _ready() -> void:
 	for theme in algorithm_themes:
 		var theme_id = _get_group_id(theme)
 		select_menu.add_button(theme_id, theme.icon)
+	_update_body_using_theme(algorithm_themes[0])	
 
 func _on_select_menu_pressed(id: String) -> void:
 	_update_body_using_group_id(algorithm_themes, id)
 
 func _update_body_using_group_id(themes: Array[AlgorithmTheme], id: String) -> void:
 	var theme = _get_group_by_id(themes, id)
+	_update_body_using_theme(theme)
+
+func _update_body_using_theme(theme: AlgorithmTheme):
 	_update_menu_tab_text(theme.label)
 	_update_body_content(theme)
 

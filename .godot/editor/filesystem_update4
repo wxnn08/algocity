@@ -1,5 +1,13 @@
-res://src/menu/algorithms/buy_algorithm.tscn
+res://src/menu/algorithms/menu_algorithms.tscn
 res://themes/menu_general.tres
+res://src/resources/instantiated/sort_theme.tres
+res://src/resources/instantiated/find_theme.tres
 res://src/shaders/blur2d.gdshader
 res://src/menu/algorithms/algorithm_unlock.tscn
+res://src/menu/general/dark_shadow_button.tscn
+res://src/menu/menu.tscn
 res://src/menu/algorithms/algorithm_unlock.gd
+res://src/menu/algorithms/menu_algorithms.gd
+res://src/resources/player.gd
+res://src/resources/instantiated/player_1.tres
+res://src/resources/player_variables.gd

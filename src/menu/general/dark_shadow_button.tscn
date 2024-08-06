@@ -17,10 +17,12 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(50, 50)
 size_flags_horizontal = 6
-size_flags_vertical = 6
+size_flags_vertical = 4
 script = ExtResource("1_ggcb5")
-icon_node = NodePath("MarginContainer/PanelContainer/MarginContainer/TextureRect")
+icon_node = NodePath("MarginContainer/MarginContainer2/TextureRect")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -32,18 +34,18 @@ grow_vertical = 2
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 7
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="Background" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_type_variation = &"DarkShadowButton"
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer2"]
 layout_mode = 2
 texture = ExtResource("2_51hfq")
 expand_mode = 5

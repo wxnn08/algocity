@@ -1,8 +1,9 @@
-VBoxContainer
-Control
 MarginContainer
 Button
+LineEdit
 Label
+VBoxContainer
+Control
 CenterContainer
 CustomButton
 TextureButton
